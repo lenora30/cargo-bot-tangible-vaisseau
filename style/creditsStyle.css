@@ -1,0 +1,19 @@
+body {
+    font-family: sans-serif;
+}
+
+#main {
+    background-color: #eeeeee;
+    border-radius: 5px;
+    width: 60%;
+    margin: auto;
+    margin-top: 2%;
+    padding: 2%;
+    text-align: justify;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 96%;
+}

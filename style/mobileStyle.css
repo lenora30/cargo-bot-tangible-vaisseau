@@ -1,0 +1,73 @@
+#statutContainer {
+    padding: 20px;
+    margin: 20px;
+    color: white;
+    text-align: center;
+    background-color: var(--main-color);
+    width: 320px;
+    border-radius: 40px;
+}
+
+#statut {
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(22, 0, 0, 0.315);
+    border-radius: 40px;
+    height: 60px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#sLabel {
+    font-size: 1.5em;
+}
+
+#sIcon {
+    height: 35px;
+    margin-right: 10px;
+} 
+
+#main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+    background-color: var(--main-color);
+    border-radius: 20%;
+    height: 600px; 
+    width: 600px;
+    border: none;
+    cursor: pointer;
+}
+
+#imgButton {
+    display: inline-block;
+}
+
+#imgButton input[type=file] {
+    display:none;
+}
+
+#imageSpan {
+    display: inline-block;
+    height: 600px; 
+    width: 600px;
+    cursor: pointer;
+    background-image: url("img/photo.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px;
+}
+
+#instruc {
+    font-size: 2em;
+    text-align: center;
+    width: 600px;
+}

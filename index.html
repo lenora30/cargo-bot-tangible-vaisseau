@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Cargo-Bot</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Apprenez les bases de l'algorithmique et de la programmation">
+  <meta name="keywords"
+    content="programmation, tangible, algorithmique, Cargo-Bot, Cargo-not, apprentissage, éducation, robot, jeu, physique, programmer, apprendre, école, collège, lycée, primaire, algorithme">
+  <meta name="author" content="Benjamin Gliech, Salwa El Fatini">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/indexStyle.css">
+</head>
+
+<body>
+  <header>
+    <h1 id="title" onclick="window.location.href = 'index.html';">Cargo-Bot</h1>
+  </header>
+  <div id="main">
+
+
+    <div id="debut">
+      <div id="box">
+        <h2 id="ban">Apprenez les bases de l'algorithmique et de la programmation</h2>
+        <button id="play" onclick="window.location.href = 'main.html';">JOUER</button>
+      </div>
+    </div>
+
+
+    <div id="begin-content">
+      <div>
+        <h2>Quel est le principe de ce jeu ?</h2>
+        Le Cargo-Bot est un jeu conçu pour apprendre les bases de l'algorithmique et de la programmation.
+        Un robot virtuel déplace des blocs de couleur entre une disposition de départ et un but. Le principe du jeu est
+        d'écrire un programme en plaçant les instructions dans le bon ordre et ainsi commander le robot virtuel pour atteindre la position finale.
+      </div>
+    </div>
+
+
+    <div id="regles" class="close">
+
+      <h2 class="title">Comment jouer ?</h2>
+
+      <div id="etapes" class="bloc">
+        <div class="etape">
+          <h3>
+            1<br>Écrire un programme
+          </h3>
+          <div id="etape1">
+            Commencez par choisir le niveau que vous voulez réaliser dans l'interface :
+            <img class="exemple" src="img/panneau_jeu.PNG">
+            <!--<div id="carte">
+              <img id="carte_niveau" class="exemple" src="img/niveau.svg">
+              Ou bien à l'aide d'une carte de niveau à placer sur la grille de programmation.
+            </div>-->
+
+            Vous pouvez voir la disposition de départ des blocs dans la partie « exécution du programme »
+            et la disposition finale à atteindre dans la partie « but ». <br>
+            Vous pouvez maintenant écrire votre programme en plaçant les cartes d'instructions sur la grille ou en faisant glisser les blocs du panneau commandes.
+            <img class="exemple" src="img/commande.PNG">
+            <a href="#savoir_regles">En savoir plus sur les règles de programmation.</a>
+          </div>
+        </div>
+
+        <div class="etape">
+          <h3>
+            2<br>Transférer le programme (pour la version tangible)
+          </h3>
+          <div id="etape2">
+            La transmission du programme, réalisé sur feuille, jusqu'à l'ordinateur se fait grâce à une photo de la
+            grille.
+            Pour cela trois moyens s'offrent à vous :
+            <div>
+              <img src="style/img/cam.svg">
+              <div>
+                Prendre une photo à l'aide d'une webcam.
+              </div>
+            </div>
+
+            <div>
+              <img src="style/img/addPhoto.svg">
+              <div>
+                Utiliser une image existante sur l'ordinateur.
+              </div>
+            </div>
+
+            <div>
+              <img src="style/img/phone.svg">
+              <div>
+                Prendre une photo à l'aide d'un téléphone, connecté à l'ordinateur grâce à un QR Code.
+              </div>
+            </div>
+            <div>
+              <img src="img/tchek.png">
+              Quand toutes les instructions sont détéctées, cliquez sur le bouton vert pour transmettre le programme.
+            </div>
+            Pour assurer une bonne détéction, prenez la photo bien en face de la feuille, évitez les flashs et les
+            ombres.<br>
+            <img id="bon" src="img/BonTransfere.png" width="100%" height="auto">
+          </div>
+        </div>
+
+        <div class="etape">
+          <h3>
+            3<br>Exécuter le programme
+          </h3>
+          <div id="executer">
+            Commandez le robot en exécutant votre programme à l'aide des boutons de lecture et de la règle de vitesse.
+
+            <div id="command_execution">
+              <img class="exemple" src="img/touches.png">
+            </div>
+            <!--<div id="ayuda">
+              <img src="img/aide.png" width="40px" height="auto">
+              Une aide est disponible si vous ne parvenez pas à résoudre le niveau.
+            </div>-->
+
+            <div id="save">
+              Vous avez la possibilité de sauvegarder des programmes tant que la page web reste ouverte :
+              <div>
+                <img src="style/img/save.svg">
+                <div class="court">
+                  Sauvegarder le programme en cours.
+                </div>
+              </div>
+              <div>
+                <img src="style/img/load.svg">
+                <div class="court">
+                  Charger un programme sauvegardé.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="between-content"></div>
+
+    <div>
+      <div class="close">
+        <h2 id="savoir_regles" class="title">Comment écrire un programme ?</h2>
+
+        <div class="bloc">
+          L'écriture d'un programme se fait en remplissant la grille avec des cartes d'instructions en version tangible ou en glissant les commandes
+          dans les cases sinon.
+          Le remplissage se fait en partant de la gauche et sans laisser de case vide.
+          Le robot commencera par les cases suivant celle nommée début.
+          Il existe deux types d'instructions :
+          <div class="grp_parties" id="part">
+            <div id="deplacement" class="explications">
+              <h3>1 - Déplacements</h3>
+
+              <div class="carotte">
+                <img src="img/instruction/103.svg" width="40px" height="40px">
+                <div>
+                  Aller à droite d'un pas.
+                </div>
+              </div>
+
+              <div class="carotte">
+                <img src="img/instruction/107.svg" width="40px" height="40px">
+                <div>
+                  Aller à gauche d'un pas.
+                </div>
+              </div>
+
+              <div class="carotte">
+                <img src="img/instruction/109.svg" width="40px" height="40px">
+                <div>
+                  Descendre et remonter la pince du robot. S'il y a un bloc dans la pince, il est déposé,
+                  sinon la pince prend le bloc situé en dessous.
+                </div>
+              </div>
+
+            </div>
+
+            <div id="appel_fonction" class="explications">
+              <h3>2 - Appel de programme / procédure</h3>
+
+              <div>
+                <img src="img/instruction/117.svg" width="40px" height="40px">
+                <div>
+                  Il existe quatre programmes (P0, P1, P2, P3), qui peuvent être appelés les uns par les autres.
+                  Quand un programme est appelé, il s'exécute entièrement, puis le programme qui a fait l'appel continue
+                  de s'exécuter.
+                </div>
+              </div>
+
+            </div>
+
+            <!--<div id="conditions" class="explications">
+              <h3>3 - Conditions</h3>
+              Les cartes de condition peuvent être placées au dessus d'une commande de déplacement ou d'appel de
+              programme.
+              La commande ne sera exécutée que si la condition est vérifiée :
+              <div>
+                <img src="img/instruction/157.svg" width="40px" height="40px">
+                <div>
+                  La commande est exécutée si la pince est vide.
+                </div>
+              </div>
+              <div>
+                <img src="img/instruction/181.svg" width="40px" height="40px">
+                <div>
+                  La commande est exécutée si la pince contient un bloc.
+                </div>
+              </div>
+              <div>
+                <img src="img/instruction/167.svg" width="40px" height="40px">
+                <div>
+                  La commande est exécutée si la pince contient un bloc jaune (ou bleu, rouge, vert, selon la carte
+                  choisie).
+                </div>
+              </div>
+            </div>-->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="between-content"></div>
+
+    <div class="close">
+      <h2 id="end" class="title">Comment préparer le matériel ?</h2>
+      <div id="materiel" class="bloc">
+        <div id="blabla">
+          Il vous faut :
+          <ul>
+            <li>
+              Un ordinateur, eventuellement connecté à un vidéoprojecteur.
+            </li>
+            <li>
+              Un webcam ou un smartphone.
+            </li>
+            <li>
+              Des grilles et des cartes d'instruction imprimées (pdf ci-dessous).
+            </li>
+          </ul>
+          <br><button class="button" onclick="window.open('tangible-grids/PDF/CargoTangible.pdf')">Ouvrir le
+            pdf</button>
+        </div>
+        <div id="print">
+          <iframe type="application/pdf" src="tangible-grids/PDF/CargoTangible.pdf" id="pdf" width="90%"
+            height="300px"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div id="end-content"></div>
+
+    <div id="content">
+      <h2 id="genese">A propos du projet</h2>
+      <div>
+
+        Ce projet a été réalisé dans le cadre d'un stage à l'université de Strasbourg,
+        encadré par Julien Narboux et Basile Sauvage, en collaboration avec l'IREM de Strasbourg.
+        La programmation tangible se fait à l'aide d'objets physiques à la place des habituels
+        programmes numériques.
+        La motivation première est de proposé un dispositif accessible à tous et facile à déployer en classe.
+        Avec notre dispositif, le matériel informatique nécessaire est seulement composé d'un
+        ordinateur central, pour lancer le programme, ainsi qu'un téléphone ou une webcam
+        pour réaliser des photos.
+        <h2 id="credit">Crédits</h2>
+        Le Cargo-Bot est un jeu de Rui Viana, trademark of Two Lives Left (<a
+          href="https://twolivesleft.com/CargoBot/">Cargo-Bot</a>).<br>
+        L'adaptation en Javascript a été réalisée par Joe Tessler (<a
+          href="https://github.com/jtessler/cargo-not">GitHub</a>).<br>
+        Des niveaux supplémentaires sont tirés du <a href="http://www-verimag.imag.fr/~wack/CargoBot/">site de
+          Benjamin Wack</a>.<br>
+        La librairie TopCodes est réalisée par TIDAL-Lab (<a
+          href="https://github.com/TIDAL-Lab/TopCodes">GitHub</a>).<br>
+        Modifications pour la création de cette version tangible par Salwa El Fatini et Benjamin Gliech (<a
+          href="https://github.com/Pinguee/cargo-bot-tangible">GitHub</a>).<br>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div>2022 | Enora Ledac & Rosemarie Streefkerk</div>
+    <a href="index.html#credit">Crédits</a>
+    |
+    <a href="https://github.com/lenora30/cargo-bot-vaisseau">GitHub</a>
+    <div id="logos">
+      <img src="img/logoUnistra-07.svg" height="50px" width="auto">
+      <img src="img/irem.jpg" height="50px" width="auto">
+      <img src="img/logo_ICube.png" height="50px" width="auto">
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="scripts/index.js"></script>
+  <script src="script_style.js"></script>
+</body>
+
+</html>

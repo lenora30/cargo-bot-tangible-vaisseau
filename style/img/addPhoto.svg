@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="42px" height="42px">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;}
+	.st1{fill:none;stroke:#000000;stroke-width:32;stroke-linecap:round;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#000000;stroke-width:32;stroke-miterlimit:10;}
+</style>
+<path class="st0" d="M208,64h66.8c8.5,0,16.6,3.4,22.6,9.4l141.3,141.3c6,6,9.4,14.1,9.4,22.6V432c0,26.5-21.5,48-48,48H192
+	c-26.5,0-48-21.5-48-48V304"/>
+<path class="st0" d="M288,72v120c0,17.7,14.3,32,32,32h120"/>
+<path class="st1" d="M160,80v152c0.2,13.1-10.3,23.8-23.4,24c-0.2,0-0.4,0-0.6,0c-12,0-24-9.1-24-24V88c0-30.6,16.6-56,48-56
+	s48,24.8,48,55.4v138.8c0,43-27.8,77.9-72,77.9s-72-34.9-72-77.9V144"/>
+<ellipse class="st2" cx="345.5" cy="293.8" rx="21.8" ry="22.7"/>
+<path class="st0" d="M323.1,410l-63.4-65.8c-8.4-8.7-21.8-9.1-30.7-0.9l-85,78.5"/>
+<path class="st0" d="M267.1,480l86.3-89.7c8.2-8.5,21.3-9.2,30.2-1.5l51.5,44.6"/>
+</svg>

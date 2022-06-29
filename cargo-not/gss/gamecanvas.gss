@@ -1,0 +1,23 @@
+.cn-game-canvas-container {
+  width: 375px;
+  float: right;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cn-game-canvas {
+  background-color: #ffffff;
+}
+
+.cn-goal {
+  background-color: #ffffff;
+  width: 375px;
+}
+
+.cn-goal canvas {
+  display: block;
+}
+
+.cn-game-canvas-animated {
+  margin: 25px auto 0 auto;
+}

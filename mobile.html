@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cargo Tangible</title>
+	<meta name="robots" content="noindex">
+	<meta name="googlebot" content="noindex">
+	<link rel="stylesheet" href="style/mobileStyle.css">
+	<link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+	<div id=main>
+		<div id="statutContainer">
+			<label for="statut" id="sLabel" class="statut">Statut :</label>
+			<div  id="statut" class="statut">
+				<img id="sIcon" src="style/img/unconnected.svg"/>
+				<p id="sText">Non connecté</p>
+			</div>
+		</div>
+
+		<div id="imgButton" class="button">
+			<label>
+				<input type="file" accept="image/*" id="imageInput" capture="camera" disabled>
+			  	<span id="imageSpan"></span>
+			</label>
+		</div>
+		
+		<p id="instruc">Cliquez sur l'appareil photo ci-dessus pour prendre une photo et l'envoyer à l'ordinateur.</p>
+	</div>
+
+	<script src="TopCodes/js/adapter-0.2.9.js"></script>
+	<script src="TopCodes/js/topcodes.js"></script>
+	<script defer src="TopCodes/dart/main.dart.js"></script>
+  	<script src="scripts/peerjs.min.js"></script>
+	<script src="scripts/mobile.js"></script>
+</body>
+</html>
