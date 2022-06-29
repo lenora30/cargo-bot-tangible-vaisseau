@@ -6,8 +6,8 @@ var computerID = window.location.hash;
 var cameras = [];
 var peer = new Peer({
     config: {'iceServers': [
-        //{ url: 'stun:stun.l.google.com:19302' },
-        { url: 'turn:cargobot-tangible.u-strasbg.fr', username: 'azertyuiop', credential: 'azertyuiop' }
+        { url: 'stun:stun.l.google.com:19302' }//,
+        //{ url: 'turn:cargobot-tangible.u-strasbg.fr', username: 'azertyuiop', credential: 'azertyuiop' }
     ]}
 });
 var conn;
