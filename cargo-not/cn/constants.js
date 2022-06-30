@@ -26,7 +26,7 @@ cn.constants.GAME_MARGIN = 1;
 
 
 /** @type {string} @const */
-cn.constants.GAME_COLOR = 'white';
+cn.constants.GAME_COLOR = '#464646';
 
 
 /** @type {number} @const */
@@ -71,7 +71,7 @@ cn.constants.STACK_HEIGHT = 10;
 
 
 /** @type {string} @const */
-cn.constants.STACK_COLOR = cn.constants.LEVEL_COLOR;
+cn.constants.STACK_COLOR = '#464646';
 
 
 /** @type {number} @const */
