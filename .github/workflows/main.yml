@@ -24,6 +24,7 @@ jobs:
         run: |
           cd ./cargo-not/
           chmod a+rwx py/index.py
+          vi +':wq ++ff=unix' py/index.py
           make closure
           make release
           rm .gitignore
