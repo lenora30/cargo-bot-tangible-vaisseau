@@ -18,11 +18,12 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.x' 
+          python-version: '2.x' 
 
       - name: Build cargo-not
         run: |
           cd ./cargo-not/
+          chmod a+rwx py/index.py
           make closure
           make release
           rm .gitignore
