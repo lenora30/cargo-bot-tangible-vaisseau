@@ -34,7 +34,7 @@ function connect(computerID) {
     conn.on('close', function () {
         document.getElementById("sText").innerHTML = "Déconnecté";
         document.getElementById("sIcon").src = "style/img/disconnected.svg";
-        imageInput.disabled=true;
+        imageInput.disabled=false;
     });
 }
 
