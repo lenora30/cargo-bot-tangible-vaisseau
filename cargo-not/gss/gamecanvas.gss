@@ -6,11 +6,11 @@
 }
 
 .cn-game-canvas {
-  background-color: #ffffff;
+  background-color: #464646;
 }
 
 .cn-goal {
-  background-color: #ffffff;
+  background-color: #464646;
   width: 375px;
 }
 

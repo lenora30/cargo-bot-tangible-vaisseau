@@ -36,7 +36,7 @@
 
 .goog-tab-bar-vertical {
   padding: 10px 0;
-  background-color: #ffffff;
+  background-color: #464646;
 }
 
 .goog-tab-bar-vertical .goog-tab {
@@ -59,13 +59,15 @@
 .goog-tab[title=Champo] { @mixin bg('png/difficulty6.png', 65%); }*/
 
 .goog-tab-hover {
-  background-color: #dedede;
+  background-color: black;
+  color: white;
 }
 
 .goog-tab-bar-horizontal .goog-tab-selected {
-  background-color: #ffffff;
+  background-color: #464646;
 }
 
 .goog-tab-bar-vertical .goog-tab-selected {
-  background-color: #6ec9c8;
+  background-color: white;
+  color: black;
 }
