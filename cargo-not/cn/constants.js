@@ -42,7 +42,7 @@ cn.constants.GOAL_MARGIN = 80;
 
 
 /** @type {string} @const */
-cn.constants.BOT_COLOR = '#909090';
+cn.constants.BOT_COLOR = 'white';
 
 
 /** @type {number} @const */
