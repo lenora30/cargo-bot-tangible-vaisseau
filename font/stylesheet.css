@@ -4,8 +4,8 @@
 
 @font-face {
     font-family: 'raleway_dotsregular';
-    src: url('https://github.com/lenora30/cargo-bot-vaisseau/tree/master/font/ralewaydots-regular-webfont.woff2') format('woff2'),
-         url('https://github.com/lenora30/cargo-bot-vaisseau/tree/master/font/ralewaydots-regular-webfont.woff') format('woff');
+    src: url('font/ralewaydots-regular-webfont.woff2') format('woff2'),
+         url('font/ralewaydots-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
