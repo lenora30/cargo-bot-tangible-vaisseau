@@ -10,6 +10,11 @@
 
 .cn-toolbox {
   margin: 0 auto;
+  cursor: grab;
+}
+
+.cn_-command_:hover {
+  cursor: grab;
 }
 
 @defmixin condition-command(HEIGHT) {

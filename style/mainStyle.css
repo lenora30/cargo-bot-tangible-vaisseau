@@ -28,6 +28,7 @@ header {
 h1 {
     transition: all 0.2s;
     cursor: pointer;
+    color: #2afd8d;
 }
 
 h1:hover {

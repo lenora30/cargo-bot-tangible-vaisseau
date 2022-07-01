@@ -100,6 +100,7 @@ cn.ui.ProgramEditor.prototype.registerDragDropEvents_ = function(
           throw Error('invalid data in register.');
         }
         goog.style.setOpacity(e.dragSourceItem.element, 0.5);
+        e.dragSourceItem.element.style.cursor = "grabbing" ;
       });
 
   this.getHandler().listen(dragGroup, EventType.DRAGEND,
@@ -108,6 +109,7 @@ cn.ui.ProgramEditor.prototype.registerDragDropEvents_ = function(
           goog.dom.removeNode(e.dragSourceItem.element);
         } else {
           goog.style.setOpacity(e.dragSourceItem.element, 1.0);
+          e.dragSourceItem.element.style.cursor = "grab" ;
         }
       });
 
@@ -191,6 +193,7 @@ cn.ui.ProgramEditor.prototype.highlightExecution = function() {
 cn.ui.ProgramEditor.prototype.unhighlightExecution = function() {
   this.forEachRegister(function(register) {
     goog.style.setOpacity(register.getElement(), 1.0);
+    register.getElement().style.cursor = "grab" ;
   });
 };
 
