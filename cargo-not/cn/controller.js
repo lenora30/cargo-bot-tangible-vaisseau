@@ -55,11 +55,11 @@ cn.controller.play = function(game, ui) {
       case cn.model.Command.RRIGHT:
         cn.controller.moveRRight(game, ui);
         break;
+      case cn.model.Command.PIOCHE_N:
+        cn.controller.movePioche_n(game, ui);
+        break;
       case cn.model.Command.PIOCHE_B:
         cn.controller.movePioche_b(game, ui);
-        break;
-      case cn.model.Command.PIOCHE_R:
-        cn.controller.movePioche_r(game, ui);
         break;
       case cn.model.Command.DOWN:
         cn.controller.movePoser(game, ui);
@@ -186,7 +186,7 @@ cn.controller.moveRRight = function(game, ui) {
  * @param {!cn.model.Game} game The current game.
  * @param {!cn.ui.GameUi} ui A pointer to the UI.
  */
- cn.controller.movePioche_b = function(game, ui) {
+ cn.controller.movePioche_n = function(game, ui) {
   var pile_b = game.level.stacks[5];
   if (game.bot.hasCargo()) {
     alert('Tu ne peux pas piocher avec la pince pleine');
@@ -210,7 +210,7 @@ cn.controller.moveRRight = function(game, ui) {
  * @param {!cn.model.Game} game The current game.
  * @param {!cn.ui.GameUi} ui A pointer to the UI.
  */
- cn.controller.movePioche_r = function(game, ui) {
+ cn.controller.movePioche_b = function(game, ui) {
   var pile_r = game.level.stacks[0];
   if (game.bot.hasCargo()) {
     alert('Tu ne peux pas piocher avec la pince pleine');
@@ -487,12 +487,12 @@ cn.controller.setScan = function (game, codesArray) {
       goog.style.setTransparentBackgroundImage(conditions[e[1]*8+e[2]], "png/green.svg");
       break;*/
     case 173:
-      cn.controller.setCommand(game,e[1],e[2],cn.model.Command.PIOCHE_R);
-      goog.style.setTransparentBackgroundImage(commands[e[1]*8+e[2]], "png/pioche_r.png");
-      break;
-    case 179:
       cn.controller.setCommand(game,e[1],e[2],cn.model.Command.PIOCHE_B);
       goog.style.setTransparentBackgroundImage(commands[e[1]*8+e[2]], "png/pioche_b.png");
+      break;
+    case 179:
+      cn.controller.setCommand(game,e[1],e[2],cn.model.Command.PIOCHE_N);
+      goog.style.setTransparentBackgroundImage(commands[e[1]*8+e[2]], "png/pioche_n.png");
       break;
     /*case 181:
       cn.controller.setCondition(game,e[1],e[2],cn.model.Condition.ANY);
