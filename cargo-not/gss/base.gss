@@ -1,16 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap');
+
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
   font-size: 10px;
   font-weight: bold;
   color: #2afd8d;
 }
 
-@defmixin rounded-borders(AMOUNT) {
+ @defmixin rounded-borders(AMOUNT) {
   border-radius: AMOUNT;
   /* @alternate */ -moz-border-radius: AMOUNT;
   /* @alternate */ -webkit-border-radius: AMOUNT;
 }
-canvas, div { @mixin rounded-borders(5px); }
+canvas, div { @mixin rounded-borders(5px); } 
 
 div:after {
   content: ' '; /* Makes the div 'fill' the floating sub-divs. */

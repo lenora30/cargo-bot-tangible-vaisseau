@@ -71,7 +71,7 @@ cn.constants.STACK_HEIGHT = 10;
 
 
 /** @type {string} @const */
-cn.constants.STACK_COLOR = '#464646';
+cn.constants.STACK_COLOR = 'white';
 
 
 /** @type {number} @const */

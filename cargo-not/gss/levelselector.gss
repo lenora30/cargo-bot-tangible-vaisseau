@@ -15,9 +15,9 @@
   padding: 0 10px;
 }
 
-.goog-tab {
+/*.goog-tab {
   @mixin rounded-borders(0);
-}
+}*/
 
 .goog-tab:hover {
   cursor: pointer;
@@ -31,7 +31,7 @@
   padding: 5px 0;
   background-position: center;
   background-repeat: no-repeat;
-  @mixin rounded-borders(5px 5px 0 0);
+  /*@mixin rounded-borders(5px 5px 0 0);*/
 }
 
 .goog-tab-bar-vertical {
@@ -60,7 +60,7 @@
 
 .goog-tab-hover {
   background-color: black;
-  color: white;
+  color: #2afd8d;
 }
 
 .goog-tab-bar-horizontal .goog-tab-selected {
@@ -69,5 +69,5 @@
 
 .goog-tab-bar-vertical .goog-tab-selected {
   background-color: white;
-  color: black;
+  color: #FF0070;
 }
