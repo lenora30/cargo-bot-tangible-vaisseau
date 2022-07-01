@@ -37,8 +37,8 @@
 .cn-command-lleft { background-image: url('png/lleft.png'); }
 .cn-command-right { background-image: url('png/right.png'); }
 .cn-command-rright { background-image: url('png/rright.png'); }
+.cn-command-pioche_n { background-image: url('png/pioche_n.png'); }
 .cn-command-pioche_b { background-image: url('png/pioche_b.png'); }
-.cn-command-pioche_r { background-image: url('png/pioche_r.png'); }
 .cn-command-down { background-image: url('png/poser.png'); }
 .cn-command-f0 { background-image: url('png/depart.png'); }
 .cn-command-f1 { background-image: url('png/proc.png'); }
