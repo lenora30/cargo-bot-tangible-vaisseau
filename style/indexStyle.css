@@ -1,17 +1,35 @@
+:root {
+    --main-color: black;
+    --sec-color: #464646;
+    --ter-color: 'white';
+    --quad-color: #ff006f;
+    --quint-color:  #2afd8d;
+    --txt-color: rgb(54, 54, 54);
+}
 
 body {
     margin: 0;
     padding: 0;
     background-color: var(--sec-color);
+    font-family: 'Work Sans', sans-serif;
 }
 
 header{
-    margin-bottom: 0;
+    margin: 0 0 20px 0;
+    padding: 1px;
+    background-color: var(--main-color);
+    color: white;
+    text-align: center;
+    font-size: larger;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.295);
+    margin-bottom: auto;
 }
 
 #title {
+    font-family: 'Raleway Dots', cursive;
     background: none;
     text-decoration: none;
+    text-shadow: 30 30 30px rgba(255, 255, 255, 0.295);
     color: #2afd8d;
     cursor: pointer;
     transition: all 0.2s;
@@ -23,10 +41,12 @@ header{
 
 .title {
     cursor: pointer;
+    font-family: 'Raleway Dots', cursive;
+
 }
 
 .title:hover {
-    color: var(--sec-color);
+    color: var(--quad-color);
 }
 
 #ban {
@@ -35,6 +55,7 @@ header{
 }
 
 #box {
+    font-family: 'Raleway Dots', cursive;
     display: flex;
     flex-direction: column;
     background-color: #0000008c;
@@ -53,7 +74,7 @@ header{
 
 #play {
     align-self: flex-end;
-    background-color: white;
+    background-color: 'white';
     border: none;
     /* background-image: url("img/play_arrow_black_48dp.svg"); */
     background-size: cover;
@@ -65,8 +86,9 @@ header{
 }
 
 #play:hover {
-    box-shadow: 0 0 10px var(--quad-color);
+    box-shadow: 0 0 10px var(--ter-color);
     transition: all 0.2s;
+    background-color: var(--quint-color)
 }
 
 #debut{
@@ -78,7 +100,8 @@ header{
 }
 
 #begin-content {
-    background-color: #eeeeee;
+    background-color: var(--main-color);
+    color:  white;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     width: 60%;
@@ -89,7 +112,7 @@ header{
 }
 
 #end-content {
-    background-color: #eeeeee;
+    background-color: var(--sec-color);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     position: relative;
@@ -107,7 +130,7 @@ header{
     padding: 2%;
     padding-top: 5px;
     padding-bottom: 5px;
-    background-color: #eeeeee;
+    background-color: var(--sec-color);
 }
 
 .court {
@@ -115,7 +138,8 @@ header{
 }
 
 #content {
-    background-color: #eeeeee;
+    background-color: var(--main-color);
+    color:  white;
     border-radius: 5px;
     width: 60%;
     margin: auto;
@@ -216,7 +240,9 @@ header{
 
 
 .close h2 {
-    background-color: #eeeeee;
+    background-color: var(--main-color);
+    font-family: 'Raleway Dots', cursive;
+    color: white;
     width: 60%;
     margin: auto;
     padding: 2%;
@@ -250,6 +276,7 @@ header{
 
 #regles h3 {
     text-align: center;
+    font-family: 'Raleway Dots', cursive;
 }
 
 #etape1 {
@@ -376,11 +403,14 @@ header{
 
 h2 {
     text-align: center;
+    font-family: 'Raleway Dots', cursive;
 }
 
 footer {
     background-color: var(--txt-color);
     color: #eeeeee;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 90%;
     height: 80px;
     margin-top: 10%;
     padding: 2%;
@@ -389,7 +419,11 @@ footer {
 
 a {
     text-decoration: none;
-    color: var(--sec-color)
+    color: var(--quint-color)
+}
+
+a:hover {
+    color:  var(--quad-color);
 }
 
 @media screen and (max-width: 800px) {
