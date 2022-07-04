@@ -42,7 +42,7 @@ cn.constants.GOAL_MARGIN = 80;
 
 
 /** @type {string} @const */
-cn.constants.BOT_COLOR = 'white';
+cn.constants.BOT_COLOR = '#d1d1d1';
 
 
 /** @type {number} @const */
@@ -71,7 +71,7 @@ cn.constants.STACK_HEIGHT = 10;
 
 
 /** @type {string} @const */
-cn.constants.STACK_COLOR = 'white';
+cn.constants.STACK_COLOR = cn.constants.BOT_COLOR;;
 
 
 /** @type {number} @const */
