@@ -40,7 +40,7 @@
 }
 
 .goog-tab-bar-vertical .goog-tab {
-  height: 11px;
+  height: 12px;
   padding: 5px 15px;
 }
 
