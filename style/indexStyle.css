@@ -82,6 +82,11 @@ header{
     margin: 0;
 }
 
+/*#main {
+    display: flex;
+    flex-direction: column;
+}*/
+
 #box {
     font-family: 'font_fabriqueregular';
     display: flex;
@@ -117,6 +122,22 @@ header{
     box-shadow: 0 0 10px var(--ter-color);
     transition: all 0.2s;
     background-color: var(--quint-color)
+}
+
+#play_phone {
+    visibility: hidden;
+    height: 20%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-self: center;
+    background-color: black;
+    color: var(--quad-color);
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+    font-size: 40%;
+    border-radius: 6px;
+    padding: 5px;
+    z-index: 1;
 }
 
 #debut{
@@ -452,5 +473,41 @@ a:hover {
 @media screen and (max-width: 800px) {
     #box{
         width: 75%;
+        position: relative;
+        margin-left: 20%;
     }
+
+    #play {
+        margin-top: 10%;
+    }
+
+    #play_phone {
+        visibility: visible;
+        width:  75%;
+    }
+
+    #begin-content {
+        margin-top: 35%;
+    }
+
+    #ban {
+    font-size: 80%;
+    }
+
+}
+
+@media screen and (min-width:  801px) and (max-width:  1024px) {
+    #box{
+        width: 85%;
+    }
+
+    #play_phone {
+        visibility: visible;
+        width:  80%;
+    }
+    
+    #begin-content {
+        margin-top: 0%;
+    }
+
 }
