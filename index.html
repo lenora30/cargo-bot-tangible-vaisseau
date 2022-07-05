@@ -7,7 +7,7 @@
   <meta name="description" content="Apprenez les bases de l'algorithmique et de la programmation">
   <meta name="keywords"
     content="programmation, tangible, algorithmique, Cargo-Bot, Cargo-not, apprentissage, éducation, robot, jeu, physique, programmer, apprendre, école, collège, lycée, primaire, algorithme">
-  <meta name="author" content="Benjamin Gliech, Salwa El Fatini">
+  <meta name="author" content="Rosemarie Streefkerk, Enora Ledac">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/style.css">
   <link rel="stylesheet" href="style/indexStyle.css">
@@ -16,10 +16,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- title font : Raleway Dots -->
   <link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap" rel="stylesheet"> 
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- body font : Work Sans -->
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&display=swap" rel="stylesheet"> 
 
   <!-- end fonts -->
@@ -56,11 +57,11 @@
       <h2 class="title">Comment jouer ?</h2>
 
       <div id="etapes" class="bloc">
-        <div class="etape">
+        <div class="etape" class="close">
           <h3>
             1<br>Écrire un programme
           </h3>
-          <div id="etape1">
+          <div id="etape1" class="bloc">
             Commencez par choisir le niveau que vous voulez réaliser dans l'interface :
             <img class="exemple" src="img/panneau_jeu.PNG">
             <!--<div id="carte">
@@ -155,15 +156,15 @@
       <div class="close">
         <h2 id="savoir_regles" class="title">Comment écrire un programme ?</h2>
 
-        <div class="bloc">
+        <div class="bloc" id="programme">
           L'écriture d'un programme se fait en remplissant la grille avec des cartes d'instructions en version tangible ou en glissant les commandes
           dans les cases sinon.
           Le remplissage se fait en partant de la gauche et sans laisser de case vide.
           Le robot commencera par les cases suivant celle nommée début.
           Il existe deux types d'instructions :
-          <div class="grp_parties" id="part">
-            <div id="deplacement" class="explications">
-              <h3>1 - Déplacements</h3>
+          <div class="grp_parties">
+            <div class="explications">
+              <h3>1 <br> Déplacements</h3>
 
               <div class="carotte">
                 <img src="img/instruction/103.svg" width="40px" height="40px">
@@ -190,7 +191,7 @@
             </div>
 
             <div id="appel_fonction" class="explications">
-              <h3>2 - Appel de programme / procédure</h3>
+              <h3>2 <br> Appel de programme / procédure</h3>
 
               <div>
                 <img src="img/instruction/117.svg" width="40px" height="40px">

@@ -1,3 +1,30 @@
+@font-face {
+    font-family: 'dot_matrixbold';
+    src: url('../Fonts/dotmbold-libre_de_droit-webfont.woff2') format('woff2'),
+         url('../Fonts/dotmbold-libre_de_droit-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'font_fabriqueregular';
+    src: url('../Fonts/fontfabrique-regular-la_fabrique-webfont.woff2') format('woff2'),
+         url('../Fonts/fontfabrique-regular-la_fabrique-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'dot_matrixregular';
+    src: url('../Fonts/dotmatri-libre_de_droit-webfont.woff2') format('woff2'),
+         url('Fonts/dotmatri-libre_de_droit-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 :root {
     --main-color: black;
     --sec-color: #464646;
@@ -26,7 +53,7 @@ h1 {
     transition: all 0.2s;
     cursor: pointer;
     color: #2afd8d;
-    font-family: 'Raleway Dots', cursive;
+    font-family: 'font_fabriqueregular';
 }
 
 h1:hover {
