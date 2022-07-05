@@ -1,7 +1,34 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap');*/
+@font-face {
+    font-family: 'dot_matrixbold';
+    src: url('../../Fonts/dotmbold-libre_de_droit-webfont.woff2') format('woff2'),
+         url('../Fonts/dotmbold-libre_de_droit-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'font_fabriqueregular';
+    src: url('../../Fonts/fontfabrique-regular-la_fabrique-webfont.woff2') format('woff2'),
+         url('../Fonts/fontfabrique-regular-la_fabrique-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'dot_matrixregular';
+    src: url('../../Fonts/dotmatri-libre_de_droit-webfont.woff2') format('woff2'),
+         url('Fonts/dotmatri-libre_de_droit-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 
 body {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'font_fabriqueregular';
   font-size: 10px;
   color: #2afd8d;
 }
