@@ -70,7 +70,7 @@ function tri_fonction(topcodes, case_height, top_right, top_left, bottom_left, b
     if (!(isVertices(e)) && inFunction(top_left, top_right, bottom_right, bottom_left, e)) {
       if (e.code >= CODE_MIN_COMMAND && e.code <= CODE_MAX_COMMAND || e.code >= CODE_MIN_DIFFICULTY) {   // check if the instruction is a command or a level code
         num_fonc = Math.floor(e.y / case_height);
-
+        console.log(num_fonc);
         if (num_fonc == 2 || num_fonc == 1)
         {
           num_fonc--;
@@ -79,7 +79,7 @@ function tri_fonction(topcodes, case_height, top_right, top_left, bottom_left, b
       } 
     }
   });
-  console.log('tab_points[0]');
+  
   return tab_points;
 }
 
