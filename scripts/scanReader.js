@@ -53,7 +53,7 @@ function index(tab_points, tab_instruc, top_right, case_width, side) {
 }
 
 /**
- * Put the codes in the right function : f0, f1, f2, f3. On the array tab_points on the form [[A], [B]] => A is in f0 and f1 is in f1.
+ * Put the codes in the right function : f0, f1, f2, f3. On the array tab_points on the form [[A], [B]] => A is in f0 and B is in f1.
  * @param {array} topcodes The array with all the objects scan
  * @param {number} case_height 
  * @param {object} top_right 
@@ -70,11 +70,13 @@ function tri_fonction(topcodes, case_height, top_right, top_left, bottom_left, b
     if (!(isVertices(e)) && inFunction(top_left, top_right, bottom_right, bottom_left, e)) {
       if (e.code >= CODE_MIN_COMMAND && e.code <= CODE_MAX_COMMAND || e.code >= CODE_MIN_DIFFICULTY) {   // check if the instruction is a command or a level code
         num_fonc = Math.floor(e.y / case_height);
+
+        if (num_fonc == 2 || num_fonc == 1)
+        {
+          num_fonc--;
+        }
         tab_points[num_fonc].push(e);
-      } /*else if (e.code >= CODE_MIN_CONDITION && e.code <= CODE_MAX_CONDITION) {                    // check if the instruction is a condition
-        num_fonc = Math.floor((e.y - (2 * case_height / 3)) / case_height) + 1;
-        tab_points[num_fonc].push(e);
-      }*/
+      } 
     }
   });
   return tab_points;
@@ -140,14 +142,6 @@ function checkCorner(topcodes) {
  */
 function isCommand(instruc) {
   return (instruc[0] >= CODE_MIN_COMMAND && instruc[0] <= CODE_MAX_COMMAND);
-}
-
-/**
- * Check if an instruction is a condition
- * @param {array} instruc 
- */
-function isCondition(instruc) {
-  return (instruc[0] >= CODE_MIN_CONDITION && instruc[0] <= CODE_MAX_CONDITION);
 }
 
 /**
@@ -221,7 +215,7 @@ function checkProgram(tab_instruc) {
 
 function warning(func, index) {
   var modalDialog = document.getElementById("modalDialog");
-  document.getElementById("dialogMsg").innerHTML = "ATTENTION<br><br>Il y a possiblement une erreur de syntaxe dans votre programme<br>(Il semble manquer une instruction dans P" + func + " à l'index " + index +")<br>";
+  document.getElementById("dialogMsg").innerHTML = "ATTENTION<br><br>Il y a possiblement une erreur dans ton programme<br>(Il semble manquer une instruction à l'index " + index +")<br>";
   document.getElementById("dialogYes").onclick = function () {
     window.location.href = "index.html#savoir_regles";
     modalDialog.style.display = "none";
