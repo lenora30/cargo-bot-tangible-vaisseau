@@ -24,7 +24,6 @@ function send(tab) {
 	console.log(tab);
 	var array = tab;
 	var hash = btoa(JSON.stringify(array));
-	console.log(hash);
 	var frame = document.getElementById("frame");
 	frame.src = "cargo-not/index.html#" + hash;
 	frame.contentWindow.location.reload(true);
@@ -94,7 +93,7 @@ getDevices().then(gotDevices);
 // Generate the QR code with the URL of the mobile page and the peerID of the computer
 function makeCode () {
 	var peerId = peer.id;
-	var address = "https://pinguee.github.io/cargo-bot-tangible/mobile.html";
+	var address = "https://lenora30.github.io/cargo-bot-tangible/mobile.html";
 	// var address = window.location.origin + "/mobile.html";
 	var qr = address + "#" + peerId; 
 	qrcode.makeCode(qr);
