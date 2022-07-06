@@ -24,6 +24,7 @@ function send(tab) {
 	console.log(tab);
 	var array = tab;
 	var hash = btoa(JSON.stringify(array));
+	console.log(hash);
 	var frame = document.getElementById("frame");
 	frame.src = "cargo-not/index.html#" + hash;
 	frame.contentWindow.location.reload(true);
