@@ -74,7 +74,7 @@ function tri_fonction(topcodes, case_height, top_right, top_left, bottom_left, b
         {
           num_fonc--;
         }
-        if (num_fonc == 2)
+        if (num_fonc == 1)
         {
           num_fonc--;
 
