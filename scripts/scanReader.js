@@ -145,6 +145,14 @@ function isCommand(instruc) {
 }
 
 /**
+* Check if an instruction is a condition
+* @param {array} instruc
+ */
+function isCondition(instruc) {
+  return (instruc[0] >= CODE_MIN_CONDITION && instruc[0] <= CODE_MAX_CONDITION);
+}
+
+/**
  * Check if a command has another command before, return true or false
  * @param {array} c A command (an instruction with a code between CODE_MIN_COMMAND and CODE_MAX_COMMAND) 
  * @param {array} tab_instruc
