@@ -17,10 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- title font : Raleway Dots -->
-  <link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap" rel="stylesheet"> 
-
-  <!-- body font : Work Sans -->
+  <!-- Work Sans -->
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400&display=swap" rel="stylesheet"> 
 
   <!-- end fonts -->
@@ -38,6 +35,7 @@
       <div id="box">
         <h2 id="ban">Apprenez les bases de l'algorithmique et de la programmation</h2>        
         <button id="play" onclick="window.location.href = 'main.html';">JOUER</button>
+        <span id="play_phone"> Ce jeu n'est pas adapté aux écrans tactiles</span>
       </div>
     </div>
 
@@ -64,16 +62,12 @@
           <div id="etape1" class="bloc">
             Commencez par choisir le niveau que vous voulez réaliser dans l'interface :
             <img class="exemple" src="img/panneau_jeu.PNG">
-            <!--<div id="carte">
-              <img id="carte_niveau" class="exemple" src="img/niveau.svg">
-              Ou bien à l'aide d'une carte de niveau à placer sur la grille de programmation.
-            </div>-->
 
             Vous pouvez voir la disposition de départ des blocs dans la partie « exécution du programme »
             et la disposition finale à atteindre dans la partie « but ». <br>
             Vous pouvez maintenant écrire votre programme en plaçant les cartes d'instructions sur la grille ou en faisant glisser les blocs du panneau commandes.
+            <br> <br>
             <img class="exemple" src="img/commande.PNG">
-            <a href="#savoir_regles">En savoir plus sur les règles de programmation.</a>
           </div>
         </div>
 
@@ -82,8 +76,7 @@
             2<br>Transférer le programme (pour la version tangible)
           </h3>
           <div id="etape2">
-            La transmission du programme, réalisé sur feuille, jusqu'à l'ordinateur se fait grâce à une photo de la
-            grille.
+            Pour transférer le programme réalisé sur feuille, il faut prendre une photo de la grille.
             Pour cela trois moyens s'offrent à vous :
             <div>
               <img src="style/img/cam.svg">
@@ -107,10 +100,10 @@
             </div>
             <div>
               <img src="img/tchek.png">
-              Quand toutes les instructions sont détéctées, cliquez sur le bouton vert pour transmettre le programme.
+              Quand toutes les instructions sont détectées, cliquez sur le bouton vert pour transmettre le programme.
             </div>
-            Pour assurer une bonne détéction, prenez la photo bien en face de la feuille, évitez les flashs et les
-            ombres.<br>
+            Pour assurer une bonne détection, prenez la photo bien en face de la feuille, évitez les flashs et les
+            ombres.<br> <br>
             <img id="bon" src="img/BonTransfere.png" width="100%" height="auto">
           </div>
         </div>
@@ -174,6 +167,13 @@
               </div>
 
               <div class="carotte">
+                <img src="img/instruction/143.png" width="40px" height="40px">
+                <div>
+                  Aller à droite de deux pas.
+                </div>
+              </div>
+
+              <div class="carotte">
                 <img src="img/instruction/107.svg" width="40px" height="40px">
                 <div>
                   Aller à gauche d'un pas.
@@ -181,54 +181,48 @@
               </div>
 
               <div class="carotte">
-                <img src="img/instruction/109.svg" width="40px" height="40px">
+                <img src="img/instruction/121.svg" width="40px" height="40px">
                 <div>
-                  Descendre et remonter la pince du robot. S'il y a un bloc dans la pince, il est déposé,
-                  sinon la pince prend le bloc situé en dessous.
+                  Aller à gauche de deux pas.
+                </div>
+              </div>
+
+              <div class="carotte">
+                <img src="img/instruction/173.svg" width="40px" height="40px">
+                <div>
+                  Aller jusqu'au tas rouge et piocher un bloc.
+                </div>
+              </div>
+
+              <div class="carotte">
+                <img src="img/instruction/179.svg" width="40px" height="40px">
+                <div>
+                  Aller jusqu'au tas bleu et piocher un bloc.
+                </div>
+              </div>
+
+              <div class="carotte">
+                <img src="img/instruction/115.png" width="40px" height="40px">
+                <div>
+                  Descendre et remonter la pince du robot pour poser un bloc. 
                 </div>
               </div>
 
             </div>
 
-            <div id="appel_fonction" class="explications">
+            <div class="explications">
               <h3>2 <br> Appel de programme / procédure</h3>
 
-              <div>
-                <img src="img/instruction/117.svg" width="40px" height="40px">
+              <div class="carotte">
+                <img src="img/instruction/117.png" width="40px" height="40px">
                 <div>
-                  Il existe quatre programmes (P0, P1, P2, P3), qui peuvent être appelés les uns par les autres.
-                  Quand un programme est appelé, il s'exécute entièrement, puis le programme qui a fait l'appel continue
+                  Il existe une procédure appelée "proc" qui peut être appelée.
+                  Quand un programme ou une procédure est appelé, il s'exécute entièrement, puis le programme qui a fait l'appel continue
                   de s'exécuter.
                 </div>
               </div>
 
             </div>
-
-            <!--<div id="conditions" class="explications">
-              <h3>3 - Conditions</h3>
-              Les cartes de condition peuvent être placées au dessus d'une commande de déplacement ou d'appel de
-              programme.
-              La commande ne sera exécutée que si la condition est vérifiée :
-              <div>
-                <img src="img/instruction/157.svg" width="40px" height="40px">
-                <div>
-                  La commande est exécutée si la pince est vide.
-                </div>
-              </div>
-              <div>
-                <img src="img/instruction/181.svg" width="40px" height="40px">
-                <div>
-                  La commande est exécutée si la pince contient un bloc.
-                </div>
-              </div>
-              <div>
-                <img src="img/instruction/167.svg" width="40px" height="40px">
-                <div>
-                  La commande est exécutée si la pince contient un bloc jaune (ou bleu, rouge, vert, selon la carte
-                  choisie).
-                </div>
-              </div>
-            </div>-->
           </div>
         </div>
       </div>
@@ -246,7 +240,7 @@
               Un ordinateur, eventuellement connecté à un vidéoprojecteur.
             </li>
             <li>
-              Un webcam ou un smartphone.
+              Une webcam ou un smartphone.
             </li>
             <li>
               Des grilles et des cartes d'instruction imprimées (pdf ci-dessous).
@@ -272,7 +266,7 @@
         encadré par Julien Narboux et Basile Sauvage, en collaboration avec l'IREM de Strasbourg.
         La programmation tangible se fait à l'aide d'objets physiques à la place des habituels
         programmes numériques.
-        La motivation première est de proposé un dispositif accessible à tous et facile à déployer en classe.
+        La motivation première est de proposer un dispositif accessible à tous et facile à déployer en classe.
         Avec notre dispositif, le matériel informatique nécessaire est seulement composé d'un
         ordinateur central, pour lancer le programme, ainsi qu'un téléphone ou une webcam
         pour réaliser des photos.
