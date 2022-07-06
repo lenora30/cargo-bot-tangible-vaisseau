@@ -123,16 +123,6 @@ h1:hover {
     background-position: top 6px right 6px;
 }
 
-#saveButton {
-    background-image: url("img/save.svg");
-    background-position: top 6px right 6px;
-}
-
-#loadButton {
-    background-image: url("img/load.svg");
-    background-position: top 6px right 6px;
-}
-
 #problems {
     background-image: url("img/help.svg");
     background-position: top 9px right 6px;
@@ -213,24 +203,6 @@ h1:hover {
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.295);
 }
 
-#saveNameInput {
-    margin-top: 10px;
-    width: 300px;
-    height: 30px;
-    justify-self: center;
-    background-color: var(--main-color);
-    color: white;
-    border: solid white;
-    outline: none;
-    border-radius: 10px; 
-}
-
-#saveLevel {
-    flex-direction: column;
-    font-size: 1em;
-    color: white;
-}
-
 #levelSelector {
     margin-top: 10px;
     width: 400px;
@@ -249,12 +221,6 @@ option {
     white-space: normal;
 
     outline-color: var(--select-focus);
-}
-
-#loadLevel {
-    flex-direction: column;
-    font-size: 1em;
-    color: white;
 }
 
 .scanner {
@@ -334,22 +300,6 @@ option {
     top: 15px;
     background-image: url("img/close.svg");
     background-color: rgb(255, 56, 30);
-    border-radius: 30%;
-}
-
-#closeButtonSave {
-    right: 15px;
-    top: 15px;
-    background-image: url("img/close.svg");
-    background-color: rgb(255, 56, 30);
-    border-radius: 30%;
-}
-
-#okButtonSave {
-    right: 15px;
-    bottom: 15px;
-    background-image: url("img/check.svg");
-    background-color: rgb(89, 255, 56);
     border-radius: 30%;
 }
 
