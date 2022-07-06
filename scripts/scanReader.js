@@ -79,6 +79,7 @@ function tri_fonction(topcodes, case_height, top_right, top_left, bottom_left, b
       } 
     }
   });
+  console.log('tab_points[0]');
   return tab_points;
 }
 
