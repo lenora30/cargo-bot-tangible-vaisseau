@@ -129,7 +129,6 @@ document.getElementById("scanButtonImg").onclick = function(){
 	var json = JSON.parse(jsonImg);
   	scan(json.topcodes, true);  
   	document.getElementById("modalImg").style.display = "none";
-	console.log('Hello');
 
 	drawLoadingScreen();
 }
