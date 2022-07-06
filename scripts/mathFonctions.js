@@ -46,7 +46,6 @@ function matrix_vec_mult(mat, vec) {
  * @param {*} point 
  */
 function translation(tab, point) {
-    console.log(tab.length);
     for (let i = 0; i < tab.length; i++) {
       if (tab[i].code != point.code) {
         tab[i].x -= point.x;
