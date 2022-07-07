@@ -428,18 +428,6 @@ cn.controller.scan = function (game, ui) {
   }
 };
 
-cn.controller.setScan = function (game, codesArray) {
-  var commands = goog.dom.getElementsByClass("cn_-command_-register_");
-  var conditions = goog.dom.getElementsByClass("cn_-condition_-register_");
-
-  commands.forEach(e => {
-    goog.style.setTransparentBackgroundImage(e, "png/drag_bottom.png");
-  });
-
-  conditions.forEach(e => {
-    goog.style.setTransparentBackgroundImage(e, "png/drag_top.png");
-  });
-
 Array.prototype.equals = function (getArray) {
     console.log('equals');
     for (var i = 0; i < getArray.length; i++) {
@@ -449,8 +437,9 @@ Array.prototype.equals = function (getArray) {
       else if (this[i] != getArray[i]) {
         return false;
       }
+    }
     return true;
-  };
+};
 
 /**
  * @param {!cn.model.Game} game The current game.
@@ -471,6 +460,23 @@ cn.controller.proc_possible = function (game) {
   console.log(proc);
   return proc;
 };
+
+
+cn.controller.setScan = function (game, codesArray) {
+  var commands = goog.dom.getElementsByClass("cn_-command_-register_");
+  var conditions = goog.dom.getElementsByClass("cn_-condition_-register_");
+
+  commands.forEach(e => {
+    goog.style.setTransparentBackgroundImage(e, "png/drag_bottom.png");
+  });
+
+  conditions.forEach(e => {
+    goog.style.setTransparentBackgroundImage(e, "png/drag_top.png");
+  });
+
+
+
+
 
   codesArray.forEach(e => {
     //Set command or condition
