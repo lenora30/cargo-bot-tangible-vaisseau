@@ -428,7 +428,7 @@ cn.controller.scan = function (game, ui) {
   }
 };
 
-Array.prototype.equals = function (getArray) {
+/*Array.prototype.equals = function (getArray) {
     console.log('equals');
     for (var i = 0; i < getArray.length; i++) {
       if (!this[i].equals(getArray[i])) {
@@ -439,7 +439,7 @@ Array.prototype.equals = function (getArray) {
       }
     }
     return true;
-};
+};*/
 
 /**
  * @param {!cn.model.Game} game The current game.
@@ -453,7 +453,7 @@ cn.controller.proc_possible = function (game) {
     level_string = cn.constants.LEVEL_CODE[i];
     level_info = cn.LevelData.levels[level_string];
     console.log(game.goal.initial_);
-    if (game.goal.initial_.equals(level_info.goal)) {
+    if (game.goal.equals(level_info)) {
       proc = false;
     }
   }
