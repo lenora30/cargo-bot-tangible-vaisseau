@@ -443,7 +443,7 @@ cn.controller.setScan = function (game, codesArray) {
 Array.prototype.equals = function (getArray) {
     console.log('equals');
     for (var i = 0; i < getArray.length; i++) {
-      if (!this[i].equals(getArray[i])) 
+      if (!this[i].equals(getArray[i])) {
         return false;
       } 
       else if (this[i] != getArray[i]) {
