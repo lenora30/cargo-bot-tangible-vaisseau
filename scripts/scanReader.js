@@ -50,6 +50,7 @@ function index(tab_points, tab_instruc, top_right, case_width, side) {
           tab_instruc.push([tab_points[i][j].code, (i-1), 15 - index]);
         }
         else if (i==2) { // 4 and 5-star levels where a second program 'proc' can be called
+          console.log('niv2');
           tab_instruc.push([tab_points[i][j].code, i-1, 7 - index]);  // 'proc' calls f2 so we push the code of f2 into f1
         }
         else {
@@ -78,7 +79,6 @@ function tri_fonction(topcodes, case_height, top_right, top_left, bottom_left, b
     if (!(isVertices(e)) && inFunction(top_left, top_right, bottom_right, bottom_left, e)) {
       if (e.code >= CODE_MIN_COMMAND && e.code <= CODE_MAX_COMMAND || e.code >= CODE_MIN_DIFFICULTY) {   // check if the instruction is a command or a level code
         num_fonc = Math.floor(e.y / case_height);
-        }
         tab_points[num_fonc].push(e);
       } 
     }
