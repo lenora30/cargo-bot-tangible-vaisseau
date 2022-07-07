@@ -31,6 +31,7 @@ cn.controller.init = function() {
  * @param {!cn.ui.GameUi} ui A pointer to the UI.
  */
 cn.controller.play = function(game, ui) {
+  console.log(game.level);
   if (game.level.equals(game.goal)) {
     // TODO(joseph): Handle winning differently.
     //var stars = game.getStars();
