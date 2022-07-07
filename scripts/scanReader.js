@@ -266,7 +266,7 @@ function scan(topcodes, sendBool) {
 
     let height = bottom_left.y - top_left.y;
     let width = top_right.x - top_left.x;
-    let case_height = (height / 4);               // Because we have 4 functions
+    let case_height = (height / 3);               // Because we have 3 lines
     let case_width = (width / 9);                 // Because we have 8 cases for each function + 1 case with the side right and the side left of the grid
     let side_left = top_left.x + (case_width / 2);
 
