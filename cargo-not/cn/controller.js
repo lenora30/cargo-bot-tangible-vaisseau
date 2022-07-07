@@ -447,10 +447,10 @@ cn.controller.proc_possible = function (game) {
   var level_string;
   var level_info;
   for (i=1; i<10; i++) {
-    console.log(i);
     level_string = cn.constants.LEVEL_CODE[i];
     level_info = cn.LevelData.levels[level_string];
-    if (game.goal.equals(level_info.goal)) {
+    console.log(game.goal.initial_);
+    if (game.goal.initial_.equals(level_info.goal)) {
       proc = false;
     }
   }
@@ -480,6 +480,7 @@ cn.controller.proc_possible = function (game) {
     case 117:
       cn.controller.setCommand(game,e[1],e[2],cn.model.Command.F1);
       goog.style.setTransparentBackgroundImage(commands[e[1]*8+e[2]], "png/proc.png");
+      console.log('proc');
       if (!(cn.controller.proc_possible(game))) {
           alert('tu ne peux pas utiliser proc dans ce niveau');
           return;
