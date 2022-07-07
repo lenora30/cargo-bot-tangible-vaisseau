@@ -31,7 +31,6 @@ cn.controller.init = function() {
  * @param {!cn.ui.GameUi} ui A pointer to the UI.
  */
 cn.controller.play = function(game, ui) {
-  console.log(game.level);
   if (game.level.equals(game.goal)) {
     // TODO(joseph): Handle winning differently.
     //var stars = game.getStars();
@@ -66,10 +65,6 @@ cn.controller.play = function(game, ui) {
         cn.controller.movePoser(game, ui);
         break;
       case cn.model.Command.F1:
-        if (game.level < 3) {
-          alert('tu ne peux pas utiliser proc dans ce niveau');
-          return;
-        }
         cn.controller.play(game, ui);
         break;
       default:
@@ -467,6 +462,10 @@ cn.controller.setScan = function (game, codesArray) {
     case 117:
       cn.controller.setCommand(game,e[1],e[2],cn.model.Command.F1);
       goog.style.setTransparentBackgroundImage(commands[e[1]*8+e[2]], "png/proc.png");
+      if (codesArray[0][0] < 10) {
+          alert('tu ne peux pas utiliser proc dans ce niveau');
+          return;
+      }
       break;
     case 121:
       cn.controller.setCommand(game,e[1],e[2],cn.model.Command.LLEFT);
@@ -476,18 +475,6 @@ cn.controller.setScan = function (game, codesArray) {
       cn.controller.setCommand(game,e[1],e[2],cn.model.Command.RRIGHT);
       goog.style.setTransparentBackgroundImage(commands[e[1]*8+e[2]], "png/rright.png");
       break;
-    /*case 157:
-      cn.controller.setCondition(game,e[1],e[2],cn.model.Condition.NONE);
-      goog.style.setTransparentBackgroundImage(conditions[e[1]*8+e[2]], "png/none.svg");
-      break;
-    case 167:
-      cn.controller.setCondition(game,e[1],e[2],cn.model.Condition.YELLOW);
-      goog.style.setTransparentBackgroundImage(conditions[e[1]*8+e[2]], "png/yellow.svg");
-      break;
-    case 171:
-      cn.controller.setCondition(game,e[1],e[2],cn.model.Condition.GREEN);
-      goog.style.setTransparentBackgroundImage(conditions[e[1]*8+e[2]], "png/green.svg");
-      break;*/
     case 173:
       cn.controller.setCommand(game,e[1],e[2],cn.model.Command.PIOCHE_B);
       goog.style.setTransparentBackgroundImage(commands[e[1]*8+e[2]], "png/pioche_b.png");
