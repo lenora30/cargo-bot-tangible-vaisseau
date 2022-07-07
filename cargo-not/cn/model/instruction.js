@@ -21,24 +21,8 @@ cn.model.Command = {
   PIOCHE_N: 'pioche_n',
   PIOCHE_B: 'pioche_b',
   DOWN: 'down',
-  //F0: 'f0',
-  F1: 'f1',
-  //F2: 'f2',
-  //F3: 'f3'
+  F1: 'f1'
 };
-
-
-/**
- * Enum for all possible program conditionals.
- * @enum {string}
-
-cn.model.Condition = {
-  NONE: 'none',
-  ANY: 'any',
-  RED: 'red',
-  BLUE: 'blue',
-};
- */
 
 
 /**
@@ -54,42 +38,15 @@ cn.model.Instruction = function() {
 cn.model.Instruction.prototype.command;
 
 
-/** @type {?cn.model.Condition} 
-cn.model.Instruction.prototype.condition;*/
-
-
 /** @return {boolean} True if the instruction has a command. */
 cn.model.Instruction.prototype.hasCommand = function() {
   return goog.isDefAndNotNull(this.command);
 };
 
 
-/**
- * @param {!cn.model.Bot} bot The bot to test the condition against.
- * @return {boolean} True if there is no condition or the given bot passes the
- *     condition.*/
- 
-/*cn.model.Instruction.prototype.passesCondition = function(bot) {
-  var cond = cn.model.Condition;
-  var col = cn.model.CargoColor;
-  switch (this.condition) {
-    //case cond.NONE: return !bot.hasCargo();
-    //case cond.ANY: return bot.hasCargo();
-    //case cond.RED: return bot.hasCargo(col.RED);
-    //case cond.GREEN: return bot.hasCargo(col.GREEN);
-    //case cond.BLUE: return bot.hasCargo(col.BLUE);
-    //case cond.YELLOW: return bot.hasCargo(col.YELLOW);
-  }
-  return true;
-};*/
-
-
-/** @return {boolean} True if the command is F0, F1, F2, or F3. */
+/** @return {boolean} True if the command is F0. */
 cn.model.Instruction.prototype.isFunctionCall = function() {
-  return this.command == cn.model.Command.F1 /*||
-      this.command == cn.model.Command.F0; ||
-      this.command == cn.model.Command.F2 ||
-      this.command == cn.model.Command.F3;*/
+  return this.command == cn.model.Command.F1;
 };
 
 
@@ -98,10 +55,7 @@ cn.model.Instruction.prototype.isFunctionCall = function() {
  */
 cn.model.Instruction.prototype.getFunctionCall = function() {
   switch (this.command) {
-    //case cn.model.Command.F0: return 0;
     case cn.model.Command.F1: return 1;
-    //case cn.model.Command.F2: return 2;
-    //case cn.model.Command.F3: return 3;
   }
   return -1;
 };
