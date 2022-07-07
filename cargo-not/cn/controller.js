@@ -440,7 +440,21 @@ cn.controller.setScan = function (game, codesArray) {
     goog.style.setTransparentBackgroundImage(e, "png/drag_top.png");
   });
 
+Array.prototype.equals = function (getArray) {
+    console.log('equals');
+    for (var i = 0; i < getArray.length; i++) {
+      if (!this[i].equals(getArray[i])) 
+        return false;
+      } 
+      else if (this[i] != getArray[i]) {
+        return false;
+      }
+    return true;
+  };
 
+/**
+ * @param {!cn.model.Game} game The current game.
+ */
 cn.controller.proc_possible = function (game) {
   var i;
   var proc = true;
