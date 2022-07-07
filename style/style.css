@@ -39,7 +39,7 @@
 body {
     height: 100%;
     margin: 0;
-    background-color: var(--sec-color);
+    background-color: var(--main-color);
     font-family: 'font_fabriqueregular';
 }
 
