@@ -440,6 +440,22 @@ cn.controller.setScan = function (game, codesArray) {
     goog.style.setTransparentBackgroundImage(e, "png/drag_top.png");
   });
 
+
+cn.controller.proc_possible = function (game) {
+  var i;
+  var proc = true;
+  var level_string;
+  var level_info;
+  for (i=1; i<10; i++) {
+    level_string = cn.constants.LEVEL_CODE[i];
+    level_info = cn.LevelData.levels[level_string];
+    if (game.goal.equals(level_info.goal)) {
+      proc = false;
+    }
+  }
+  return proc;
+};
+
   codesArray.forEach(e => {
     //Set command or condition
     switch (e[0]) {
@@ -462,7 +478,7 @@ cn.controller.setScan = function (game, codesArray) {
     case 117:
       cn.controller.setCommand(game,e[1],e[2],cn.model.Command.F1);
       goog.style.setTransparentBackgroundImage(commands[e[1]*8+e[2]], "png/proc.png");
-      if (not(proc_possible(game))) {
+      if (not(cn.controller.proc_possible(game))) {
           alert('tu ne peux pas utiliser proc dans ce niveau');
           return;
       }
@@ -500,20 +516,7 @@ cn.controller.setScan = function (game, codesArray) {
   });
 }
 
-proc_possible = function (game) {
-  var i;
-  var proc = true;
-  var level_string;
-  var level_info;
-  for (i=1; i<10; i++) {
-    level_string = cn.constants.LEVEL_CODE[i];
-    level_info = cn.LevelData.levels[level_string];
-    if (game.goal.equals(level_info.goal)) {
-      proc = false;
-    }
-  }
-  return proc;
-};
+
 
 /**
  * @param {!cn.model.Game} game The current game.
