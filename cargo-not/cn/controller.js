@@ -462,7 +462,7 @@ cn.controller.setScan = function (game, codesArray) {
     case 117:
       cn.controller.setCommand(game,e[1],e[2],cn.model.Command.F1);
       goog.style.setTransparentBackgroundImage(commands[e[1]*8+e[2]], "png/proc.png");
-      if (!(proc_possible(game))) {
+      if (not(proc_possible(game))) {
           alert('tu ne peux pas utiliser proc dans ce niveau');
           return;
       }
