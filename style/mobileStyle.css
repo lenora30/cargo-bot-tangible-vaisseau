@@ -1,3 +1,10 @@
+
+
+#main {
+    background-color: var(--main-color);
+    color: var(--ter-color);
+}
+
 #statutContainer {
     padding: 20px;
     margin: 20px;
@@ -8,12 +15,17 @@
     border-radius: 40px;
 }
 
+#sLabel {
+    color: var(--quint-color);
+}
+
 #statut {
+    font-family: 'font_fabriqueregular';
     font-size: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(22, 0, 0, 0.315);
+    background-color: var(--sec-color);
     border-radius: 40px;
     height: 60px;
     padding: 10px;
@@ -39,7 +51,7 @@
 }
 
 .button {
-    background-color: var(--main-color);
+    background-color: var(--sec-color);
     border-radius: 20%;
     height: 600px; 
     width: 600px;
@@ -67,6 +79,7 @@
 }
 
 #instruc {
+    font-family: 'Work Sans', sans-serif;
     font-size: 2em;
     text-align: center;
     width: 600px;

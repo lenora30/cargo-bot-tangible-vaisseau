@@ -1,10 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
 
+@font-face {
+    font-family: 'dot_matrixbold';
+    src: url('../Fonts/dotmbold-libre_de_droit-webfont.woff2') format('woff2'),
+         url('../Fonts/dotmbold-libre_de_droit-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'font_fabriqueregular';
+    src: url('../Fonts/fontfabrique-regular-la_fabrique-webfont.woff2') format('woff2'),
+         url('../Fonts/fontfabrique-regular-la_fabrique-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'dot_matrixregular';
+    src: url('../Fonts/dotmatri-libre_de_droit-webfont.woff2') format('woff2'),
+         url('Fonts/dotmatri-libre_de_droit-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 :root {
-    --main-color: #0d6164;
-    --sec-color: #79b9bb;
-    --ter-color: #F07C32;
-    --quad-color: #179489a2;
+    --main-color: black;
+    --sec-color: #464646;  /* dark gray */
+    --ter-color: white;
+    --quad-color: #ff0070;  /* neon pink */
+    --quint-color:  #00ff89;    /* neon green */
     --txt-color: rgb(54, 54, 54);
 }
 
@@ -12,7 +40,7 @@ body {
     height: 100%;
     margin: 0;
     background-color: var(--sec-color);
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'font_fabriqueregular';
 }
 
 header {
@@ -21,7 +49,7 @@ header {
     background-color: var(--main-color);
     color: white;
     text-align: center;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'font_fabriqueregular';
     font-size: larger;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.295);
 }
