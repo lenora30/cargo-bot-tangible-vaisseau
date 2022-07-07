@@ -46,7 +46,13 @@ function index(tab_points, tab_instruc, top_right, case_width, side) {
     for (let j = 0; j < tab_points[i].length; j++) {
       if (inIndex(top_right, case_width, side, tab_points[i][j])) {
         let index = Math.floor((tab_points[i][j].x - side) / case_width);
-        tab_instruc.push([tab_points[i][j].code, i, 7 - index]); // push for each instructions and commands : the code, the function number and the index in this function
+        if (i==1) { // for the level with 3 stars, where the array is made of 16 squares
+          tab_instruc.push([tab_points[i][j].code, (i-1), 15 - index]);
+        }
+        else {
+          tab_instruc.push([tab_points[i][j].code, i, 7 - index]); // push for each instructions and commands : the code, the function number and the index in this function
+        }
+        
       }
     }
   }
@@ -74,16 +80,14 @@ function tri_fonction(topcodes, case_height, top_right, top_left, bottom_left, b
         {
           num_fonc--;
         }
-        if (num_fonc == 1)
+        /*if (num_fonc == 1)
         {
           num_fonc--;
-
-        }
+        }*/
         tab_points[num_fonc].push(e);
       } 
     }
   });
-  console.log(tab_points);
   return tab_points;
 }
 
