@@ -38,7 +38,8 @@ cn.controller.play = function(game, ui) {
     alert('Le but est atteint !\n');
     return;
   }
-  console.log(game.level);
+  console.log('game', game);
+  console.log('ui', ui);
   var command = game.program.next(game.bot);
   ui.programEditor.highlightExecution();
   ui.programEditor.disableDragDrop();
