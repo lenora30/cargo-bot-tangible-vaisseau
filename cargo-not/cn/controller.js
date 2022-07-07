@@ -453,6 +453,7 @@ cn.controller.proc_possible = function (game) {
       proc = false;
     }
   }
+  console.log(proc);
   return proc;
 };
 
