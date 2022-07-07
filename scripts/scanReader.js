@@ -71,13 +71,14 @@ function index(tab_points, tab_instruc, top_right, case_width, side) {
  * @return {array} tab_points
  */
 function tri_fonction(topcodes, case_height, top_right, top_left, bottom_left, bottom_right) {
-  let tab_points = [[], [], [], []];
+  let tab_points = [[], [], []];
   topcodes.forEach(e => {
     let num_fonc;
 
     if (!(isVertices(e)) && inFunction(top_left, top_right, bottom_right, bottom_left, e)) {
       if (e.code >= CODE_MIN_COMMAND && e.code <= CODE_MAX_COMMAND || e.code >= CODE_MIN_DIFFICULTY) {   // check if the instruction is a command or a level code
         num_fonc = Math.floor(e.y / case_height);
+        console.log(num_fonc);
         tab_points[num_fonc].push(e);
       } 
     }
