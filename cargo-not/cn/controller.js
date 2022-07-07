@@ -64,10 +64,11 @@ cn.controller.play = function(game, ui) {
       case cn.model.Command.DOWN:
         cn.controller.movePoser(game, ui);
         break;
-      //case cn.model.Command.F0:
       case cn.model.Command.F1:
-      //case cn.model.Command.F2:
-      //case cn.model.Command.F3:
+        if (game.level < 3) {
+          alert('tu ne peux pas utiliser proc dans ce niveau');
+          return;
+        }
         cn.controller.play(game, ui);
         break;
       default:
