@@ -119,6 +119,7 @@ cn.model.Level.prototype.reset = function() {
  * @return {boolean} True if they're equal.
  */
 cn.model.Level.prototype.equals = function(other) {
+  console.log(other.stacks);
   return goog.array.equals(
       this.stacks,
       other.stacks,
