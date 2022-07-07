@@ -448,8 +448,8 @@ cn.controller.proc_possible = function (game) {
   var level_info;
   for (i=1; i<10; i++) {
     level_string = cn.constants.LEVEL_CODE[i];
-    console.log(level_string);
     level_info = cn.LevelData.levels[level_string];
+    console.log(level_info.goal);
     if (game.goal.equals(level_info.goal)) {
       proc = false;
     }
