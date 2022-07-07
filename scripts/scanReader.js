@@ -49,10 +49,12 @@ function index(tab_points, tab_instruc, top_right, case_width, side) {
         if (i==1) { // for the level with 3 stars, where the array is made of 16 squares
           tab_instruc.push([tab_points[i][j].code, (i-1), 15 - index]);
         }
-        else {
-          tab_instruc.push([tab_points[i][j].code, i, 7 - index]); // push for each instructions and commands : the code, the function number and the index in this function
+        else if (i==2) { // 4 and 5-star levels where a second program 'proc' can be called
+          tab_instruc.push([tab_points[i][j].code, i-1, 7 - index]);  // 'proc' calls f2 so we push the code of f2 into f1
         }
-        
+        else {
+          tab_instruc.push([tab_points[i][j].code, i, 7 - index]); // push for each instruction and command: the code, the function number and the index in this function
+        }
       }
     }
   }
@@ -80,10 +82,6 @@ function tri_fonction(topcodes, case_height, top_right, top_left, bottom_left, b
         {
           num_fonc--;
         }
-        /*if (num_fonc == 1)
-        {
-          num_fonc--;
-        }*/
         tab_points[num_fonc].push(e);
       } 
     }
