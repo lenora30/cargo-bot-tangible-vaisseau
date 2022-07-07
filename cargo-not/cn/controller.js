@@ -38,8 +38,6 @@ cn.controller.play = function(game, ui) {
     alert('Le but est atteint !\n');
     return;
   }
-  console.log('game', game);
-  console.log('ui', ui);
   var command = game.program.next(game.bot);
   ui.programEditor.highlightExecution();
   ui.programEditor.disableDragDrop();
@@ -442,6 +440,22 @@ cn.controller.setScan = function (game, codesArray) {
     goog.style.setTransparentBackgroundImage(e, "png/drag_top.png");
   });
 
+
+cn.controller.proc_possible = function (game) {
+  var i;
+  var proc = true;
+  var level_string;
+  var level_info;
+  for (i=1; i<10; i++) {
+    level_string = cn.constants.LEVEL_CODE[i];
+    level_info = cn.LevelData.levels[level_string];
+    if (game.goal.equals(level_info.goal)) {
+      proc = false;
+    }
+  }
+  return proc;
+};
+
   codesArray.forEach(e => {
     //Set command or condition
     switch (e[0]) {
@@ -464,11 +478,10 @@ cn.controller.setScan = function (game, codesArray) {
     case 117:
       cn.controller.setCommand(game,e[1],e[2],cn.model.Command.F1);
       goog.style.setTransparentBackgroundImage(commands[e[1]*8+e[2]], "png/proc.png");
-      console.log(e);
-      /*if (codesArray[0][0] < 10) {
+      if (!(cn.controller.proc_possible(game))) {
           alert('tu ne peux pas utiliser proc dans ce niveau');
           return;
-      }*/
+      }
       break;
     case 121:
       cn.controller.setCommand(game,e[1],e[2],cn.model.Command.LLEFT);
@@ -502,6 +515,8 @@ cn.controller.setScan = function (game, codesArray) {
     }
   });
 }
+
+
 
 /**
  * @param {!cn.model.Game} game The current game.
