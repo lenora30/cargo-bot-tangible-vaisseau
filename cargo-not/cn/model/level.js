@@ -29,7 +29,7 @@ cn.model.Level = function(initial, opt_height, opt_margin) {
   this.reset();
 
   var margin = opt_margin || cn.constants.STACK_WIDTH;
-  console.log(this);
+  console.log(this.initial_);
   goog.base(
       this,
       goog.array.reduce(
