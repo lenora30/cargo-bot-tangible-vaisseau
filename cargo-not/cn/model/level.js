@@ -29,6 +29,7 @@ cn.model.Level = function(initial, opt_height, opt_margin) {
   this.reset();
 
   var margin = opt_margin || cn.constants.STACK_WIDTH;
+  console.log(this);
   goog.base(
       this,
       goog.array.reduce(
@@ -131,7 +132,7 @@ cn.model.Level.prototype.equals = function(other) {
  * @return {boolean} True if they're equal.
  */
  cn.model.Level.prototype.equals2 = function(other) {
-  console.log(other);
+  //console.log(other);
   return goog.array.equals(
       this.stacks,
       other.goal,
