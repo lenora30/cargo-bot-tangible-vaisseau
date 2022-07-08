@@ -27,7 +27,6 @@ goog.require('goog.array');
 cn.model.Level = function(initial, opt_height, opt_margin) {
   this.initial_ = initial;
   this.reset();
-
   var margin = opt_margin || cn.constants.STACK_WIDTH;
   goog.base(
       this,
@@ -119,8 +118,22 @@ cn.model.Level.prototype.reset = function() {
  * @return {boolean} True if they're equal.
  */
 cn.model.Level.prototype.equals = function(other) {
+  
   return goog.array.equals(
       this.stacks,
       other.stacks,
       function(a, b) { return a.equals(b); });
 };
+
+/**
+ * @param {!cn.model.Level} other The level to compare to (when it is from leveldata).
+ * @return {boolean} True if they're equal.
+ */
+ cn.model.Level.prototype.equals2 = function(other) {
+  //console.log(other);
+  return goog.array.equals(
+      this.stacks,
+      other.goal,
+      function(a, b) { return a.equals(b); });
+};
+
