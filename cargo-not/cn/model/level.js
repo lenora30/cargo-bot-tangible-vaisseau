@@ -131,7 +131,7 @@ cn.model.Level.prototype.equals = function(other) {
  * @return {boolean} True if they're equal.
  */
  cn.model.Level.prototype.equals2 = function(other) {
-  console.log(other.goal);
+  console.log(this.stacks);
   return goog.array.equals(
       this.stacks,
       other.goal,
