@@ -27,9 +27,7 @@ goog.require('goog.array');
 cn.model.Level = function(initial, opt_height, opt_margin) {
   this.initial_ = initial;
   this.reset();
-
   var margin = opt_margin || cn.constants.STACK_WIDTH;
-  console.log(this.initial_);
   goog.base(
       this,
       goog.array.reduce(
