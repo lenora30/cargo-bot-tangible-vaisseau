@@ -428,32 +428,6 @@ cn.controller.scan = function (game, ui) {
   }
 };
 
-/*Array.prototype.equals = function (getArray) {
-    console.log('equals');
-    for (var i = 0; i < getArray.length; i++) {
-      if (!this[i].equals(getArray[i])) {
-        return false;
-      } 
-      else if (this[i] != getArray[i]) {
-        return false;
-      }
-    }
-    return true;
-};*/
-
-/**
- * @param {!cn.model.Game} game The current game.
- */
-cn.controller.proc_possible = function (game) {
-  if(game.levelData.functions.length>1) {
-    return true;
-  }
-  else {
-    return false;
-  }
-};
-
-
 cn.controller.setScan = function (game, codesArray) {
   var commands = goog.dom.getElementsByClass("cn_-command_-register_");
   var conditions = goog.dom.getElementsByClass("cn_-condition_-register_");
@@ -467,8 +441,22 @@ cn.controller.setScan = function (game, codesArray) {
   });
 
 
-
-
+cn.controller.proc_possible = function (game) {
+  var i;
+  var proc = true;
+  var level_string;
+  var level_info;
+  for (i=1; i<10; i++) {
+    console.log(i);
+    level_string = cn.constants.LEVEL_CODE[i];
+    level_info = cn.LevelData.levels[level_string];
+    if (game.goal.equals(level_info.goal)) {
+      proc = false;
+    }
+  }
+  console.log(proc);
+  return proc;
+};
 
   codesArray.forEach(e => {
     //Set command or condition
