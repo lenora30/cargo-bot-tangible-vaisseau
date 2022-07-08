@@ -27,7 +27,6 @@ jobs:
           vi +':wq ++ff=unix' py/index.py
           make closure
           make release
-          rm .gitignore
       
       - name: Deploy Webpage
         uses: JamesIves/github-pages-deploy-action@4.1.4
