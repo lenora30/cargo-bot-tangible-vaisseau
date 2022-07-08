@@ -119,7 +119,7 @@ cn.model.Level.prototype.reset = function() {
  * @return {boolean} True if they're equal.
  */
 cn.model.Level.prototype.equals = function(other) {
-  console.log(this.stacks);
+  
   return goog.array.equals(
       this.stacks,
       other.stacks,
@@ -130,8 +130,8 @@ cn.model.Level.prototype.equals = function(other) {
  * @param {!cn.model.Level} other The level to compare to (when it is from leveldata).
  * @return {boolean} True if they're equal.
  */
- cn.model.Level.prototype.equals = function(other) {
-  
+ cn.model.Level.prototype.equals2 = function(other) {
+  console.log(other.goal);
   return goog.array.equals(
       this.stacks,
       other.goal,
