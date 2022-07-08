@@ -25,6 +25,18 @@ cn.controller.init = function() {
   cn.controller.scan(game, ui);  
 };
 
+/**
+ * @param {!cn.model.Game} game The current game.
+ */
+cn.controller.proc_possible = function (game) {
+  if(game.levelData.functions.length>1) {
+    return true;
+  }
+  else {
+    return false;
+  }
+};
+
 
 /**
  * @param {!cn.model.Game} game The current game.
@@ -65,8 +77,14 @@ cn.controller.play = function(game, ui) {
         cn.controller.movePoser(game, ui);
         break;
       case cn.model.Command.F1:
-        cn.controller.play(game, ui);
-        break;
+        if (cn.controller.proc_possible(game)) {
+          cn.controller.play(game, ui);
+          break;
+        }
+        else {
+          alert('tu ne peux pas utiliser proc dans ce niveau');
+          return;
+        }
       default:
         throw Error('Animation not implemented for "' + command + '"');
     }
@@ -441,17 +459,9 @@ cn.controller.scan = function (game, ui) {
     return true;
 };*/
 
-/**
- * @param {!cn.model.Game} game The current game.
- */
-cn.controller.proc_possible = function (game) {
-  if(game.levelData.functions.length>1) {
-    return true;
-  }
-  else {
-    return false;
-  }
-};
+
+
+
 
 
 cn.controller.setScan = function (game, codesArray) {
