@@ -115,6 +115,7 @@ cn.model.Game.prototype.loadLevel = function(levelData) {
   this.levelData = levelData;
   this.level = new cn.model.Level(levelData.initial);
   this.goal = new cn.model.Level(levelData.goal);
+  console.log(this.goal.initial_);
   this.program.init(levelData.functions);
 
   // Setup and scale the goal 'view'. This should only happen once per level
