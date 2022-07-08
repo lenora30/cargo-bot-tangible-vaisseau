@@ -7,7 +7,7 @@ var okButtonLoad = document.getElementById('okButtonLoad');
 var deleteSave = document.getElementById('deleteSave');
 var levelSelector = document.getElementById('levelSelector');
 var qrcode = new QRCode("qrcode", {width: 500, height: 500});
-var peer = new Peer({
+var peer = new SimplePeer({
 	config: {'iceServers': [
 		{ url: 'stun:stun.l.google.com:19302' },
 		{ url: 'turn:cargobot-tangible.u-strasbg.fr', username: 'azertyuiop', credential: 'azertyuiop' }
