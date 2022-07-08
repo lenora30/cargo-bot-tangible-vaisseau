@@ -9,16 +9,17 @@ var deleteSave = document.getElementById('deleteSave');
 var levelSelector = document.getElementById('levelSelector');
 var qrcode = new QRCode("qrcode", {width: 500, height: 500});
 var peer = new SimplePeer({
-	initiator: false,
+	initiator: true,
+	trickle: true,
 	config: {'iceServers': [
 		{ urls: 'stun:stun.l.google.com:19302' },
-		{urls: 'stun:global.stun.twilio.com:3478?transport=udp'},
+		{ urls: 'stun:global.stun.twilio.com:3478'},
 		{ urls: 'turn:cargobot-tangible.u-strasbg.fr', username: 'azertyuiop', credential: 'azertyuiop' }
 	]}
 }); 
 var currentProgram = null;
 
-
+console.log("I am your father")
 /**
  * Send the instructions to the cargo-bot iframe
  * @param {array} tab The final array with for each instruction : his code, his function, his index in the function
@@ -95,12 +96,17 @@ getDevices().then(gotDevices);
 
 // Generate the QR code with the URL of the mobile page and the peerID of the computer
 function makeCode () {
-	var peerId = peer.id;
-	console.log(peer);
-	var address = "https://lenora30.github.io/cargo-bot-tangible-vaisseau/mobile.html";
+	var peerId = peer._id;
+	console.log(peerId);
+	console.log("checkpoint1");
+	var address = "C:/Users/Elève/Douments/Acctivités_stage/cargo_lab/mobile.html";
+		console.log("checkpoint2");
 	// var address = window.location.origin + "/mobile.html";
 	var qr = address + "#" + peerId; 
+	console.log(qr)
+	console.log("checkpoint3");
 	qrcode.makeCode(qr);
+	console.log("checkpoint4");
 }
 
 

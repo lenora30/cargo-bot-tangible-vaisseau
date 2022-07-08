@@ -1,15 +1,18 @@
+var une_connerie = require ('SimplePeer');
 var modalImg = document.getElementById('modalImg');
 var videoSelect = document.getElementById('videoSource');
 var imageInput = document.getElementById("imageInput");
 var closeButtonImg = document.getElementById("closeButtonImg");
 var computerID = window.location.hash;
 var cameras = [];
-var peer = new Peer({
-    config: {'iceServers': [
-        { urls: 'stun:stun.l.google.com:19302' },
-        { urls: 'turn:cargobot-tangible.u-strasbg.fr', username: 'azertyuiop', credential: 'azertyuiop' }
-    ]}
-});
+var peer = new SimplePeer({
+	initiator: false,
+	config: {'iceServers': [
+		{ urls: 'stun:stun.l.google.com:19302' },
+		{urls: 'stun:global.stun.twilio.com:3478?transport=tcp'},
+		{ urls: 'turn:cargobot-tangible.u-strasbg.fr', username: 'azertyuiop', credential: 'azertyuiop' }
+	]}
+}); 
 var conn;
 var tabInstruc;
 
@@ -25,6 +28,7 @@ setTimeout(function() {
 // connect to the computer, get the computer ID in the URL hash
 function connect(computerID) {
     conn = peer.connect(computerID);
+    console.log(conn);  
     conn.on('open', function () {
         document.getElementById("sText").innerHTML = "Connecté";
         document.getElementById("sIcon").src = "style/img/connected.svg";
