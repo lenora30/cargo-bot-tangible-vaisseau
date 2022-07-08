@@ -1,4 +1,3 @@
-
 var videoSelect = document.getElementById('videoSource');
 var saveLevel = document.getElementById('saveLevel');
 var loadLevel = document.getElementById('loadLevel');
@@ -8,11 +7,11 @@ var okButtonLoad = document.getElementById('okButtonLoad');
 var deleteSave = document.getElementById('deleteSave');
 var levelSelector = document.getElementById('levelSelector');
 var qrcode = new QRCode("qrcode", {width: 500, height: 500});
-var peer = new SimplePeer({
-	initiator: false,
+var peer = new Peer({
+	initiator: true,
+	trickle: false,
 	config: {'iceServers': [
 		{ urls: 'stun:stun.l.google.com:19302' },
-		{urls: 'stun:global.stun.twilio.com:3478?transport=udp'},
 		{ urls: 'turn:cargobot-tangible.u-strasbg.fr', username: 'azertyuiop', credential: 'azertyuiop' }
 	]}
 }); 
