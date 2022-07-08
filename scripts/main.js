@@ -99,7 +99,7 @@ function makeCode () {
 	var peerId = peer._id;
 	console.log(peerId);
 	console.log("checkpoint1");
-	var address = "C:/Users/Elève/Douments/Acctivités_stage/cargo_lab/mobile.html";
+	var address = "https://lenora30.github.io/cargo-bot-tangible-vaisseau/mobile.html";
 		console.log("checkpoint2");
 	// var address = window.location.origin + "/mobile.html";
 	var qr = address + "#" + peerId; 
