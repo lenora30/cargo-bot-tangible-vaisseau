@@ -445,20 +445,12 @@ cn.controller.scan = function (game, ui) {
  * @param {!cn.model.Game} game The current game.
  */
 cn.controller.proc_possible = function (game) {
-  var i;
-  var proc = true;
-  var level_string;
-  var level_info;
-  for (i=1; i<10; i++) {
-    level_string = cn.constants.LEVEL_CODE[i];
-    level_info = cn.LevelData.levels[level_string];
-    console.log(game.levelData.functions);
-    if (game.level.equals2(level_info)) {
-      proc = false;
-    }
+  if(game.levelData.functions.length>1) {
+    return true;
   }
-  console.log(proc);
-  return proc;
+  else {
+    return false;
+  }
 };
 
 
